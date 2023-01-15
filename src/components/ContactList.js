@@ -3,9 +3,9 @@ import ContactCard from "./ContactCard";
 import "semantic-ui-css/semantic.min.css";
 
 const ContactList = (props) => {
-  const renderContactsList = () => {
-    return <ContactCard contacts={props.contact} />;
-  };
+  const renderContactsList = props.contacts.map((contact) => {
+    return <ContactCard contacts={contact} />;
+  });
   return <div> {renderContactsList} </div>;
 };
 
